@@ -8,7 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Movie Addict',
-  description: 'Discover and track your favorite movies with Movie Addict. Explore a vast collection, read reviews, and stay updated with the latest releases.',
+  icons: {
+    icon: '/assets/logo.png'
+  }
 }
 
 export default function RootLayout({

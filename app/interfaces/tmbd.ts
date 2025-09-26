@@ -106,3 +106,10 @@ export interface LoadMoreProps {
     loading: boolean;
     hasMore: boolean;
 }
+
+
+export interface ButtonProps {
+    size: 'small' | 'medium' | 'large';
+    shape: 'rounded-sm' | 'rounded-md' | 'rounded-full';
+    text: string;
+}

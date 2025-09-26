@@ -3,8 +3,9 @@ import { navItems } from  '@/app/constants';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Button from '../ui/Button';
 
-const Header = () => {
+const Header: React.FC = () => {
     const pathname = usePathname();
 
     return (
@@ -27,6 +28,10 @@ const Header = () => {
                                 </Link>
                             )
                         })}
+                    </div>
+                    <div className='flex flex-row space-x-3'>
+                        <Button text="Sign In" size="small" shape='rounded-md'></Button>
+                        <Button text="Sign Up" size="small" shape='rounded-md'></Button>
                     </div>
                 </div>
             </div>

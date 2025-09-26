@@ -1,49 +1,24 @@
-'use client';
+import { type ButtonProps } from '@/app/interfaces/tmbd'
 
-import { Heart } from 'lucide-react';
-import { Movie } from '@/app/interfaces/tmbd';
-import { useFavoriteStore } from '@/app/lib/store';
-
-interface FavoriteButtonProps {
-    movie: Movie;
-    size?: 'sm' | 'md' | 'lg';
-}
-
-const FavoriteButton = ({ movie, size = 'md' }: FavoriteButtonProps) => {
-    const { favorites, addFavorite, removeFavorite } = useFavoriteStore();
-    const isFavorite = favorites.some(fav => fav.id === movie.id);
-
-    const handleClick = () => {
-        if (isFavorite) {
-            removeFavorite(movie.id);
-        } else {
-            addFavorite(movie);
-        }
-    };
-
+const Button: React.FC<ButtonProps> = ({ size, shape, text }) => {
     const sizeClasses = {
-        sm: 'p-1.5',
-        md: 'p-2',
-        lg: 'p-3'
-    };
+        small: "p-2",
+        medium: "p-5",
+        large: "p-7",
+    }
 
-    const iconSizes = {
-        sm: 'h-4 w-4',
-        md: 'h-5 w-5',
-        lg: 'h-6 w-6'
-    };
+    const shapeClasses = {
+        'rounded-sm': "rounded-sm",
+        'rounded-md': "rounded-md",
+        'rounded-full': "rounded-full"
+    }
 
     return (
-        <button
-            onClick={handleClick}
-            className={`rounded-full bg-gray-800 hover:bg-gray-700 transition-colors ${sizeClasses[size]}`}
-            aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
-        >
-            <Heart
-                className={`${iconSizes[size]} ${isFavorite ? 'fill-red-500 text-red-500' : 'text-white'}`}
-            />
+        <button className={`${sizeClasses[size]} ${shapeClasses[shape]} bg-blue-600 text-white hover:bg-yellow-300 cursor-pointer`}>
+            {text}
         </button>
-    );
-};
+    )
+}
 
-export default FavoriteButton;
+
+export default Button;

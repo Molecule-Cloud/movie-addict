@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Star, Info } from 'lucide-react';
 import { Movie } from '@/app/interfaces/tmbd';
 import { getImageUrl } from '@/app/lib/api/tmdb';
+import { ButtonProps } from '@/app/interfaces/tmbd'
 
 interface HeroCarouselProps {
     movies: Movie[];
