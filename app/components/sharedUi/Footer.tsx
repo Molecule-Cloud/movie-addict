@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from'next/image' 
-import { Film, ExternalLink, Mail, Heart } from 'lucide-react';
+import { ExternalLink, Mail, Heart } from 'lucide-react';
 
 
 

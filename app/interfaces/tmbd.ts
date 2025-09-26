@@ -113,3 +113,8 @@ export interface ButtonProps {
     shape: 'rounded-sm' | 'rounded-md' | 'rounded-full';
     text: string;
 }
+
+
+export interface HeroCarouselProps {
+    movies: Movie[];
+}

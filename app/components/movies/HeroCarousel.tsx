@@ -7,11 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, Star, Info } from 'lucide-react';
 import { Movie } from '@/app/interfaces/tmbd';
 import { getImageUrl } from '@/app/lib/api/tmdb';
-import { ButtonProps } from '@/app/interfaces/tmbd'
+import { HeroCarouselProps } from '@/app/interfaces/tmbd'
 
-interface HeroCarouselProps {
-    movies: Movie[];
-}
+
 
 export default function HeroCarousel({ movies }: HeroCarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);

@@ -52,8 +52,7 @@ export const getMovieCredits = async (id: number): Promise<Credits> => {
     return fetchFromTMDB<Credits>(`/movie/${id}/credits`);
 };
 
-// Add to /lib/api/tmdb.ts
-export const getMovieVideos = async (id: number): Promise<any> => {
+export const getMovieVideos = async (id: number): Promise<string> => {
     return fetchFromTMDB(`/movie/${id}/videos`);
 };
 
