@@ -50,7 +50,7 @@ export default function TrendingPage() {
     return (
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold mb-2">Trending Movies</h1>
-            <p className="text-gray-400 mb-8">Discover what's popular right now</p>
+            <p className="text-gray-400 mb-8">Discover what&apos;s popular right now</p>
 
             {error && (
                 <div className="bg-red-900/50 border border-red-700 rounded-lg p-4 mb-4">
