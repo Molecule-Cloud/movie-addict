@@ -26,7 +26,7 @@ const LoadMore = ({ onLoadMore, loading, hasMore }: LoadMoreProps) => {
     if (!hasMore) {
         return (
             <div className="text-center py-8 text-gray-400">
-                You've seen all the movies! 🎬
+                You have seen all the movies!
             </div>
         );
     }

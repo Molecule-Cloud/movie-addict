@@ -1,28 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import {
-    Film,
-    Heart,
-    ExternalLink,
-    Mail,
-    Popcorn
-} from 'lucide-react';
+import Image from'next/image' 
+import { Film, ExternalLink, Mail, Heart } from 'lucide-react';
 
-export default function Footer() {
+
+
+const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
         <footer className="bg-gray-900 border-t border-gray-800 mt-16">
             <div className="container mx-auto px-4 py-12">
-                {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
-                    {/* Brand Section */}
                     <div className="md:col-span-2">
-                        <Link href="/" className="flex items-center space-x-2 text-xl font-bold text-blue-400 mb-4">
-                            <Popcorn className="h-8 w-8" />
-                            <span>Movie Addict</span>
+                        <Link href="/" className="flex items-center font-bold mb-4">
+                            <Image src="/assets/logo.png" width={100} height={100} alt="Logo"></Image>
                         </Link>
                         <p className="text-gray-400 max-w-md mb-4">
                             Discover, save, and explore your favorite movies. Your personal cinema companion for finding the perfect film.
@@ -30,8 +24,8 @@ export default function Footer() {
                         <div className="flex space-x-4">
                             
                             <a
-                                href="mailto:hello@cinerec.com"
-                                className="p-2 bg-gray-800 rounded-lg hover:bg-red-600 transition-colors"
+                                href="movie-addict@gmail.co"
+                                className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors"
                                 aria-label="Email"
                             >
                                 <Mail className="h-5 w-5" />
@@ -39,13 +33,11 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
                     <div>
-                        <h3 className="font-semibold text-lg mb-4">Navigation</h3>
+                        <h3 className="font-semibold text-lg mb-4">Links</h3>
                         <ul className="space-y-2">
                             <li>
                                 <Link href="/" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center space-x-1">
-                                    <Film className="h-4 w-4" />
                                     <span>Home</span>
                                 </Link>
                             </li>
@@ -61,8 +53,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link href="/favorites" className="text-gray-400 hover:text-blue-400 transition-colors flex items-center space-x-1">
-                                    <Heart className="h-4 w-4" />
-                                    <span>Favorites</span>
+                                    <span>About Us</span>
                                 </Link>
                             </li>
                         </ul>
@@ -81,26 +72,6 @@ export default function Footer() {
                                 >
                                     <ExternalLink className="h-4 w-4" />
                                     <span>TMDB API</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://nextjs.org"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-blue-400 transition-colors"
-                                >
-                                    Next.js Docs
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://tailwindcss.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-gray-400 hover:text-blue-400 transition-colors"
-                                >
-                                    Tailwind CSS
                                 </a>
                             </li>
                         </ul>
@@ -129,3 +100,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

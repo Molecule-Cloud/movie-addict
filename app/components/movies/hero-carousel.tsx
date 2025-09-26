@@ -33,7 +33,7 @@ export default function HeroCarousel({ movies }: HeroCarouselProps) {
     const nextSlide = () => {
         setCurrentIndex(prev => (prev + 1) % moviesWithBackdrops.length);
         setIsAutoPlaying(false);
-        setTimeout(() => setIsAutoPlaying(true), 10000); // Resume auto-play after 10 seconds
+        setTimeout(() => setIsAutoPlaying(true), 10000); 
     };
 
     const prevSlide = () => {
@@ -49,13 +49,13 @@ export default function HeroCarousel({ movies }: HeroCarouselProps) {
     };
 
     if (moviesWithBackdrops.length === 0) {
-        return null; // Don't render if no movies with backdrops
+        return null; 
     }
 
     const currentMovie = moviesWithBackdrops[currentIndex];
 
     return (
-        <div className="relative h-[70vh] min-h-[500px] w-full overflow-hidden rounded-xl mb-12">
+        <div className="relative h-[70vh] min-h-[350px] w-full overflow-hidden rounded-xl mb-12">
             {/* Carousel Slides */}
             <AnimatePresence mode="wait">
                 <motion.div
