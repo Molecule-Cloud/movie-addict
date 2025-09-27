@@ -117,11 +117,13 @@ Built with a mobile-first approach using Tailwind CSS, the interface adapts grac
 
 MovieAddict integrates with The Movie Database (TMDB) API to provide comprehensive movie data. The application includes:
 
-- Movie listings with pagination
+- Movie listings with infite Scrolling for trending and Popular movies
 - Detailed movie information
 - Cast and crew details
 - High-quality poster and backdrop images
 - Search functionality
+- Utitlity functions for calling API rather than custom hooks for better server and client side render
+- Lodash for debouncing in search functionality
 
 
 
